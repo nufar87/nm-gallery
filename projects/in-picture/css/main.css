@@ -1,0 +1,57 @@
+body {
+    background-color: beige;
+    text-align: center;
+
+}
+
+h1 {
+    padding: 50px;
+}
+
+.game {
+    margin: auto;
+}
+.game h3 {
+    margin-top: 15px;
+}
+.board {
+    height: 600px;
+    width: 400px;
+    background-color: blueviolet;
+    border-radius: 10%;
+    text-align: center;
+    margin: auto;
+
+}
+
+.img {
+    /* height: 350px; */
+    height: auto;
+    width: 200px;
+    border-radius: 5%;
+    margin-top: 150px;
+    padding-top: 60px;
+    margin: auto;
+    text-align: center;
+}
+
+.imgs {
+    
+    max-width: 100%;
+   
+}
+.btn {
+   margin: auto;
+   
+    height: 60px;
+    width: 300px;
+    border-radius:5%;
+    border: 5px;
+    margin-top: 20px;
+    border: 2px solid rgb(177, 172, 172);
+    cursor: pointer; 
+}
+
+.btn:hover {
+    background-color: rgb(201, 206, 211);
+}

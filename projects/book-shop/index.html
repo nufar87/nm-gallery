@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Shop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="font" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300&display=swap" rel="stylesheet">
+</head>
+<body onload="onInit()">
+    <h1>MY BOOKSHOP</h1>
+    <section class="book-filter">
+      
+        <input type="text" oninput="onSetFilterBy({txt: this.value})" placeholder="Book Title..." />
+        </br>
+        <label>
+           Max Price:
+            <input type="range" min="8" max="50" value="40" class="filter-price-range"
+                onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+        </label></br>
+        <label>
+           Min Rate:
+            <input type="range" min="0" max="10" value="0" class="filter-rate-range"
+                onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+        </label>
+        <hr />
+        <div>
+            Sort by:
+            <select class="sort-by" onchange="onSetSortBy(this.value)">
+                <option value="">Select Sorting</option>
+                <option value="price">Price</option>
+                <option value="rate">Rate</option>
+                <option value="name">Title</option>
+            </select>
+            <label>
+                Descending
+                <input class="sort-desc" type="checkbox" oninput="onSetSortBy()" />
+            </label>
+        </div>
+    </section>
+
+    <button title="Add Book" onclick="onAddBook()">Add Book</button>
+  
+    <button class="display-by-list display" onclick="onSetBooksDisplay(stat='list')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+        <button class="display-by-cards display" onclick="onSetBooksDisplay(stat='cards')">
+        <i class="fa-brands fa-buromobelexperte"></i>
+      </button>
+    </section>
+
+    <section class="list-display">
+        <table>
+                <thead>
+                    <th>ID</th>
+                    <th class="head-title" onclick="onSetSortBy('name')">Title</th>
+                    <th class="head-price" onclick="onSetSortBy('price')">Price</th>
+                    <th colspan="3">Actions</th>
+                </thead>
+                <tbody class="table-books-container"></tbody>
+            </table>
+    </section>
+
+    <section class="card-display"></section>
+
+    <div class="switch-page"></div>
+    <div class="modal">
+        <h2 class="book-title"></h2>
+        <img src="" alt="">
+        <h3>Price: <span></span> </h3>
+        <div class="book-rating"></div>
+        <h5>Book Description</h5>
+        <p class="description"></p>
+        <button onclick="onCloseModal()">Close</button>
+    </div>
+    <div class="user-msg"></div>
+
+    <script src="https://kit.fontawesome.com/f017c0e4e1.js" crossorigin="anonymous"></script>
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/book.controller.js"></script>
+</body>
+</html>

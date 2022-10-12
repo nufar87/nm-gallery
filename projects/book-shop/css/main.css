@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#F5EFE6 ;
+    color: #3C2317;
+    overflow-x: hidden;
+    padding: 0 40px;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+button {
+    background-color: #3C2317;
+    color: whitesmoke;
+    border:0;
+    border-radius: .2em;
+    padding: 6px 10px;
+    margin: 2px;
+    cursor: pointer;    
+}
+button:hover {
+    color: deepskyblue;
+}
+
+.card-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-preview {
+    background-color: white;
+    width: 25%;
+    margin:.6em;
+    border: 1px solid lightgray;
+    border-radius: .2em;
+    text-align: center;
+    padding: 5px;
+}
+.book-preview .btn-remove {
+    float:right;
+}
+
+.book-preview img {
+    max-width: 100%;
+}
+
+.book-preview h5 {
+    font-size: 1.4em;
+    text-transform: capitalize;
+    text-decoration: overline;
+    height: 5vh;
+}
+
+.book-preview h6 span{
+    color:#628E90;
+    font-size: 1.6em;
+}
+.book-preview h6{
+    font-size: 0.9em;
+}
+
+.book-filter {
+    /* background-color:#628E90; */
+    padding: 10px; 
+    margin: 20px; 
+}
+.filter-price-select {
+    text-transform: capitalize;
+}
+.book-filter hr {
+    margin: 30px;
+}
+
+
+.modal {
+    background-color: #3C2317;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: 150%;
+    height: 80vh;
+    min-width: 300px;
+    text-align: left;
+    font-size: 10px;
+    color:white;
+    border-radius: 10px;
+}
+.modal.open {
+    left: 30%;
+    transition: left .5s;
+}
+.modal h2{
+    color:#B4CDE6;
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+.modal h3 span{
+    color:#B4CDE6;
+}
+.modal > p {
+    text-align: left;
+    width: 80%;
+}
+.modal > img {
+   height: 150px;
+   width: auto;
+}
+
+.modal button {
+    background-color: #0b0604;
+}
+
+.user-msg {
+    position: fixed;
+    bottom: -100px;
+    right:10px;
+    background-color:#3C2317;
+    color:white;
+    padding: 10px;
+}
+.user-msg.open {
+    bottom: 10px;
+    transition: bottom .5s;
+}
+
+p {
+    color: white;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #628E90;
+    width: 80%;
+}
+
+th {
+    background-color:#B4CDE6;
+}
+
+td, th{
+    padding: 10px;
+}
+
+/* extra */
+
+.hide {
+    display: none;
+}
+
+.book-rating button {
+    margin: 10px;
+}
+
+button.display {
+    height: 4vh;
+}
+
+.head-title, .head-price {
+    cursor: pointer;
+}

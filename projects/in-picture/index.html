@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Play - in picture</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInitGame()">
+
+<h1>What's In the Picture </br>Kids Books</h1>
+
+    <div class="game">
+        <h3>Pick the sentence that describes the picture:</h3>
+        <div class="board">
+         <div class="imgs"></div>
+                <img class="img" src="img/1.jpeg" alt="">
+            
+            <button class="one btn" data-num="0" onclick="onCheckAnswer(this)">option one</button>
+            <button class="two btn" data-num="1" onclick="onCheckAnswer(this)">option two</button> 
+        </div>
+    </div>
+<script src="js/main.js"></script>
+</body>
+</html>

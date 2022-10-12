@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInitGame()">
+    <h1>MINE SWEEPER</h1>
+    <div class="smiley" onclick="onSmileyNewGame(gBoard.length)"></div>
+    <button onclick="onNewGame(4, 2)">EASY</button>
+    <button onclick="onNewGame(8, 14)">MEDIUM</button>
+    <button onclick="onNewGame(12, 32)">HARD</button>
+    <div class="extra">
+        <h4>LIVES:<span class="lives" ></span></h4>
+        <h4>HINTS:<span onclick="onShowHint()" class="hints"></span></h4>
+    </div>
+    <div class="set-mines">
+        <button onclick="onManuallyMode()">manually mode</button>
+        <button onclick="on7Boom(gBoard)">7BOOM!</button>
+    </div>
+    <div class="extra2">
+        <button class="safe-click" onclick="onSafeClick(this)">Safe Click <span></span></button>
+    </div>
+    <table>
+        <tbody class="board"></tbody>
+    </table>
+    <h3>TIME: <span class="timer"></span></h3>
+    <div class="modal">
+        <h2></h2>
+    </div>
+    <div class="container">
+        <h4>HIGH SCORES LIST:</h4>
+        <div class="high-scores">
+            <div class="column">
+                <h4>Level EASY</h4>
+                <ul id="easyHighScoresList" class="list"></ul>
+            </div>
+            <div class="column">
+                <h4>Level MEDIUM</h4>
+                <ul id="mediumHighScoresList" class="list"></ul>
+            </div>
+            <div class="column" >
+                <h4>Level HARD</h4>
+                <ul id="hardHighScoresList" class="list"></ul>
+            </div>
+        </div>  
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/extraFeatures.js"></script>
+    <script src="js/highScores.js"></script>
+</body>
+</html>

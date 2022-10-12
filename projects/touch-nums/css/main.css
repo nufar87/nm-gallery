@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(62, 62, 122);
+    text-align: center;
+}
+
+h1 {
+    color: aliceblue;
+}
+table {
+    border-radius: 3px;
+    text-align: center;
+    margin: auto;
+    background-color: #647E68;
+}
+.board td {
+border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.board td:hover {
+    background-color: lightsalmon;
+}
+
+.occupied {
+    background-color: lightgray;
+}
+
+.div {
+    border-radius: 5px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    margin: auto;
+   
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+    display: inline-block;
+
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+
+
+.color {
+    background-color: lightslategray;
+}
