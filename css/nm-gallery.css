@@ -775,3 +775,8 @@ fieldset[disabled] .btn-xl:hover {
     padding-right: 0;
     padding-left: 0;
 }
+
+.anim {
+    max-width: 200px;
+    margin:0 auto;
+}
