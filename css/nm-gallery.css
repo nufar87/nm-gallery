@@ -774,12 +774,10 @@ fieldset[disabled] .btn-xl:hover {
 .container {
     padding-right: 0;
     padding-left: 0;
-<<<<<<< HEAD
+    background-color: #b48b01;
 }
 
 .anim {
     max-width: 200px;
     margin:0 auto;
-=======
->>>>>>> refs/remotes/origin/main
 }
